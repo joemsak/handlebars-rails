@@ -22,8 +22,6 @@ module Handlebars::Rails
       next unless app.assets
       app.assets.append_path 'app/templates'
       app.assets.register_engine('.hbs', Tilt)
-      logger = Logger.new(STDOUT)
-      logger.debug("making link for assets registration engine");
     end
   end
 end
