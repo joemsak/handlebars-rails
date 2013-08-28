@@ -21,7 +21,7 @@ module Handlebars::Rails
     initializer "sprockets.handlebars", :after => "sprockets.environment", :group => :all do |app|
       next unless app.assets
       app.assets.append_path 'app/templates'
-      app.assets.register_engine('.hbs', Tilt)
+      app.assets.register_engine('.hbs', Handlebars::Tilt)
     end
   end
 end
